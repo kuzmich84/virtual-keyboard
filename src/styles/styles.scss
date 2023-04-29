@@ -1,0 +1,8 @@
+@import "./normalize";
+@import "./global";
+@import "./fonts";
+@import "./mixins";
+
+html {
+  scroll-behavior: smooth;
+}

@@ -1,0 +1,26 @@
+@mixin reset-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin set-georgia() {
+  font-family: "Georgia", "Verdana", serif;
+  font-weight: 400;
+}
+
+@mixin set-georgia-bold() {
+  font-family: "Georgia-Bold", "Verdana", serif;
+  font-weight: 400;
+}
+
+@mixin set-arial() {
+  font-family: "Arial", sans-serif;
+  font-weight: 400;
+}
+
+@mixin set-arial-italic() {
+  font-family: "Arial-Italic", sans-serif;
+  font-style: italic;
+  font-weight: 400;
+}

@@ -100,11 +100,11 @@ module.exports = {
       filename: 'index.html',
       template: './src/index.html'
     }),
-    // new CopyPlugin({
-    //   patterns: [
-    //     { from: "./src/assets", to: "assets" },
-    //   ],
-    // }),
+    new CopyPlugin({
+      patterns: [
+        { from: "./src/data", to: "data" },
+      ],
+    }),
     new Dotenv(),
     new ESLintPlugin({
       fix: true,
@@ -112,7 +112,7 @@ module.exports = {
     new StylelintPlugin({
       configFile: "./stylelint.config.js",
       extensions: ["scss", "sass"],
-      fix: true,
+      fix: false,
     }),
   ],
   module: {

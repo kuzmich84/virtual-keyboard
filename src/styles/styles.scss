@@ -6,3 +6,100 @@
 html {
   scroll-behavior: smooth;
 }
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+  margin: 0 10px;
+}
+
+.keyboard-wrapp {
+  @include set-georgia();
+  max-width: 1008px;
+  width: 100%;
+  background-color: #e7e7e7;
+  overflow: hidden;
+  color: #333333;
+}
+
+.keyboard-keys .lowercase {
+  text-transform: lowercase;
+}
+
+
+.row {
+  display: flex;
+}
+
+.textarea {
+  max-width: 1008px;
+  width: 100%;
+  height: 200px;
+  margin-bottom: 30px;
+  font-size: 20px;
+  padding: 10px;
+}
+
+.key {
+  width: 60px;
+  height: 60px;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 4px;
+  transition: 0.2s;
+}
+
+.backspace-key,
+.key-tab,
+.key-caps-lock,
+.key-enter,
+.key-shift,
+.key-space {
+  flex-grow: 1;
+  text-transform: capitalize;
+}
+
+.key-ctrl,
+.key-win,
+.key-alt {
+  text-transform: capitalize;
+}
+
+.key.active {
+  color: #ffffff;
+  background-color: #333333;
+  animation: key-animation-press 0.5s forwards;
+}
+
+.key.remove {
+  animation: key-animation-unpress 0.5s forwards;
+}
+
+@keyframes key-animation-press {
+  0% {
+    background-color: #ffffff;
+    color: #333333;
+  }
+
+  100% {
+    background-color: #333333;
+    color: #ffffff;
+  }
+}
+
+@keyframes key-animation-unpress {
+  0% {
+    background-color: #333333;
+    color: #ffffff;
+  }
+
+  100% {
+    background-color: #ffffff;
+    color: #333333;
+  }
+}

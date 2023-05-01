@@ -5,15 +5,13 @@
         "case-down": "`",
         "case-up": "~",
         "caps": "`",
-        "shift-caps": "~",
-        "class": ""
+        "shift-caps": "~"
       },
       "ru": {
         "case-down": "`",
         "case-up": "Ё",
         "caps": "Ё",
-        "shift-caps": "ё",
-        "class": ""
+        "shift-caps": "ё"
       }
     },
     {
@@ -21,15 +19,13 @@
         "case-down": "1",
         "case-up": "!",
         "caps": "1",
-        "shift-caps": "!",
-        "class": ""
+        "shift-caps": "!"
       },
       "ru": {
         "case-down": "1",
         "case-up": "!",
         "caps": "1",
-        "shift-caps": "!",
-        "class": ""
+        "shift-caps": "!"
       }
     },
     {
@@ -37,15 +33,13 @@
         "case-down": "2",
         "case-up": "@",
         "caps": "2",
-        "shift-caps": "@",
-        "class": ""
+        "shift-caps": "@"
       },
       "ru": {
         "case-down": "2",
         "case-up": "\"",
         "caps": "2",
-        "shift-caps": ".\"",
-        "class": ""
+        "shift-caps": ".\""
       }
     },
     {
@@ -53,15 +47,13 @@
         "case-down": "3",
         "case-up": "#",
         "caps": "3",
-        "shift-caps": "#",
-        "class": ""
+        "shift-caps": "#"
       },
       "ru": {
         "case-down": "3",
         "case-up": "№",
         "caps": "3",
-        "shift-caps": "№",
-        "class": ""
+        "shift-caps": "№"
       }
     },
     {
@@ -69,15 +61,13 @@
         "case-down": "4",
         "case-up": "$",
         "caps": "4",
-        "shift-caps": "$",
-        "class": ""
+        "shift-caps": "$"
       },
       "ru": {
         "case-down": "4",
         "case-up": ";",
         "caps": "4",
-        "shift-caps": ";",
-        "class": ""
+        "shift-caps": ";"
       }
     },
     {
@@ -85,15 +75,13 @@
         "case-down": "5",
         "case-up": "%",
         "caps": "5",
-        "shift-caps": "%",
-        "class": ""
+        "shift-caps": "%"
       },
       "ru": {
         "case-down": "5",
         "case-up": "%",
         "caps": "5",
-        "shift-caps": "%",
-        "class": ""
+        "shift-caps": "%"
       }
     },
     {
@@ -101,15 +89,13 @@
         "case-down": "6",
         "case-up": "^",
         "caps": "6",
-        "shift-caps": "^",
-        "class": ""
+        "shift-caps": "^"
       },
       "ru": {
         "case-down": "6",
         "case-up": ":",
         "caps": "6",
-        "shift-caps": ":",
-        "class": ""
+        "shift-caps": ":"
       }
     },
     {
@@ -117,15 +103,13 @@
         "case-down": "7",
         "case-up": "&",
         "caps": "7",
-        "shift-caps": "&",
-        "class": ""
+        "shift-caps": "&"
       },
       "ru": {
         "case-down": "7",
         "case-up": "?",
         "caps": "7",
-        "shift-caps": "?",
-        "class": ""
+        "shift-caps": "?"
       }
     },
     {
@@ -133,15 +117,13 @@
         "case-down": "8",
         "case-up": "*",
         "caps": "8",
-        "shift-caps": "*",
-        "class": ""
+        "shift-caps": "*"
       },
       "ru": {
         "case-down": "8",
         "case-up": "*",
         "caps": "8",
-        "shift-caps": "*",
-        "class": ""
+        "shift-caps": "*"
       }
     },
     {
@@ -149,15 +131,13 @@
         "case-down": "9",
         "case-up": "(",
         "caps": "9",
-        "shift-caps": "(",
-        "class": ""
+        "shift-caps": "("
       },
       "ru": {
         "case-down": "9",
         "case-up": "(",
         "caps": "9",
-        "shift-caps": "(",
-        "class": ""
+        "shift-caps": "("
       }
     },
     {
@@ -165,15 +145,13 @@
         "case-down": "0",
         "case-up": ")",
         "caps": "0",
-        "shift-caps": ")",
-        "class": ""
+        "shift-caps": ")"
       },
       "ru": {
         "case-down": "0",
         "case-up": ")",
         "caps": "0",
-        "shift-caps": ")",
-        "class": ""
+        "shift-caps": ")"
       }
     },
     {
@@ -181,15 +159,13 @@
         "case-down": "-",
         "case-up": "_",
         "caps": "-",
-        "shift-caps": "_",
-        "class": ""
+        "shift-caps": "_"
       },
       "ru": {
         "case-down": "-",
         "case-up": "_",
         "caps": "-",
-        "shift-caps": "_",
-        "class": ""
+        "shift-caps": "_"
       }
     },
     {
@@ -197,15 +173,13 @@
         "case-down": "-",
         "case-up": "_",
         "caps": "-",
-        "shift-caps": "_",
-        "class": ""
+        "shift-caps": "_"
       },
       "ru": {
         "case-down": "-",
         "case-up": "_",
         "caps": "-",
-        "shift-caps": "_",
-        "class": ""
+        "shift-caps": "_"
       }
     },
     {
@@ -213,15 +187,13 @@
         "case-down": "Backspace",
         "case-up": "Backspace",
         "caps": "Backspace",
-        "shift-caps": "Backspace",
-        "class": ""
+        "shift-caps": "Backspace"
       },
       "ru": {
         "case-down": "Backspace",
         "case-up": "Backspace",
         "caps": "Backspace",
-        "shift-caps": "Backspace",
-        "class": ""
+        "shift-caps": "Backspace"
       }
     }
   ],
@@ -231,15 +203,13 @@
         "case-down": "Tab",
         "case-up": "Tab",
         "caps": "Tab",
-        "shift-caps": "Tab",
-        "class": ""
+        "shift-caps": "Tab"
       },
       "ru": {
         "case-down": "Tab",
         "case-up": "Tab",
         "caps": "Tab",
-        "shift-caps": "Tab",
-        "class": "key-tab"
+        "shift-caps": "Tab"
       }
     },
     {
@@ -247,15 +217,13 @@
         "case-down": "q",
         "case-up": "Q",
         "caps": "Q",
-        "shift-caps": "q",
-        "class": ""
+        "shift-caps": "q"
       },
       "ru": {
         "case-down": "й",
         "case-up": "Й",
         "caps": "й",
-        "shift-caps": "Й",
-        "class": ""
+        "shift-caps": "Й"
       }
     },
     {
@@ -263,15 +231,13 @@
         "case-down": "w",
         "case-up": "W",
         "caps": "W",
-        "shift-caps": "w",
-        "class": ""
+        "shift-caps": "w"
       },
       "ru": {
         "case-down": "ц",
         "case-up": "Ц",
         "caps": "ц",
-        "shift-caps": "Ц",
-        "class": ""
+        "shift-caps": "Ц"
       }
     },
     {
@@ -279,15 +245,13 @@
         "case-down": "e",
         "case-up": "E",
         "caps": "E",
-        "shift-caps": "e",
-        "class": ""
+        "shift-caps": "e"
       },
       "ru": {
         "case-down": "у",
         "case-up": "У",
         "caps": "У",
-        "shift-caps": "у",
-        "class": ""
+        "shift-caps": "у"
       }
     },
     {
@@ -295,15 +259,13 @@
         "case-down": "r",
         "case-up": "R",
         "caps": "R",
-        "shift-caps": "r",
-        "class": ""
+        "shift-caps": "r"
       },
       "ru": {
         "case-down": "к",
         "case-up": "К",
         "caps": "К",
-        "shift-caps": "к",
-        "class": ""
+        "shift-caps": "к"
       }
     },
     {
@@ -311,15 +273,13 @@
         "case-down": "t",
         "case-up": "T",
         "caps": "T",
-        "shift-caps": "t",
-        "class": ""
+        "shift-caps": "t"
       },
       "ru": {
         "case-down": "е",
         "case-up": "Е",
         "caps": "Е",
-        "shift-caps": "е",
-        "class": ""
+        "shift-caps": "е"
       }
     },
     {
@@ -327,15 +287,13 @@
         "case-down": "y",
         "case-up": "Y",
         "caps": "Y",
-        "shift-caps": "y",
-        "class": ""
+        "shift-caps": "y"
       },
       "ru": {
         "case-down": "н",
         "case-up": "Н",
         "caps": "Н",
-        "shift-caps": "н",
-        "class": ""
+        "shift-caps": "н"
       }
     },
     {
@@ -343,15 +301,13 @@
         "case-down": "u",
         "case-up": "U",
         "caps": "U",
-        "shift-caps": "u",
-        "class": ""
+        "shift-caps": "u"
       },
       "ru": {
         "case-down": "г",
         "case-up": "Г",
         "caps": "Г",
-        "shift-caps": "г",
-        "class": ""
+        "shift-caps": "г"
       }
     },
     {
@@ -359,15 +315,13 @@
         "case-down": "i",
         "case-up": "I",
         "caps": "I",
-        "shift-caps": "i",
-        "class": ""
+        "shift-caps": "i"
       },
       "ru": {
         "case-down": "ш",
         "case-up": "Ш",
         "caps": "Ш",
-        "shift-caps": "ш",
-        "class": ""
+        "shift-caps": "ш"
       }
     },
     {
@@ -375,15 +329,13 @@
         "case-down": "o",
         "case-up": "O",
         "caps": "O",
-        "shift-caps": "o",
-        "class": ""
+        "shift-caps": "o"
       },
       "ru": {
         "case-down": "щ",
         "case-up": "Щ",
         "caps": "Щ",
-        "shift-caps": "щ",
-        "class": ""
+        "shift-caps": "щ"
       }
     },
     {
@@ -391,15 +343,13 @@
         "case-down": "p",
         "case-up": "P",
         "caps": "P",
-        "shift-caps": "p",
-        "class": ""
+        "shift-caps": "p"
       },
       "ru": {
         "case-down": "з",
         "case-up": "З",
         "caps": "З",
-        "shift-caps": "з",
-        "class": ""
+        "shift-caps": "з"
       }
     },
     {
@@ -407,15 +357,13 @@
         "case-down": "[",
         "case-up": "{",
         "caps": "[",
-        "shift-caps": "{",
-        "class": ""
+        "shift-caps": "{"
       },
       "ru": {
         "case-down": "х",
         "case-up": "Х",
         "caps": "Х",
-        "shift-caps": "х",
-        "class": ""
+        "shift-caps": "х"
       }
     },
     {
@@ -423,15 +371,13 @@
         "case-down": "]",
         "case-up": "}",
         "caps": "]",
-        "shift-caps": "}",
-        "class": ""
+        "shift-caps": "}"
       },
       "ru": {
         "case-down": "ъ",
         "case-up": "Ъ",
         "caps": "Ъ",
-        "shift-caps": "ъ",
-        "class": ""
+        "shift-caps": "ъ"
       }
     },
     {
@@ -439,15 +385,13 @@
         "case-down": "\\",
         "case-up": "\\",
         "caps": "\\",
-        "shift-caps": "\\",
-        "class": ""
+        "shift-caps": "\\"
       },
       "ru": {
         "case-down": "\\",
         "case-up": "\\",
         "caps": "\\",
-        "shift-caps": "\\",
-        "class": ""
+        "shift-caps": "\\"
       }
     }
   ],
@@ -457,15 +401,13 @@
         "case-down": "CapsLock",
         "case-up": "CapsLock",
         "caps": "CapsLock",
-        "shift-caps": "CapsLock",
-        "class": "key-caps-lock"
+        "shift-caps": "CapsLock"
       },
       "ru": {
         "case-down": "CapsLock",
         "case-up": "CapsLock",
         "caps": "CapsLock",
-        "shift-caps": "CapsLock",
-        "class": "key-caps-lock"
+        "shift-caps": "CapsLock"
       }
     },
     {
@@ -473,15 +415,13 @@
         "case-down": "a",
         "case-up": "A",
         "caps": "A",
-        "shift-caps": "a",
-        "class": ""
+        "shift-caps": "a"
       },
       "ru": {
         "case-down": "ф",
         "case-up": "Ф",
         "caps": "Ф",
-        "shift-caps": "ф",
-        "class": ""
+        "shift-caps": "ф"
       }
     },
     {
@@ -489,15 +429,13 @@
         "case-down": "s",
         "case-up": "S",
         "caps": "S",
-        "shift-caps": "s",
-        "class": ""
+        "shift-caps": "s"
       },
       "ru": {
         "case-down": "ы",
         "case-up": "Ы",
         "caps": "Ы",
-        "shift-caps": "ы",
-        "class": ""
+        "shift-caps": "ы"
       }
     },
     {
@@ -505,15 +443,13 @@
         "case-down": "d",
         "case-up": "D",
         "caps": "D",
-        "shift-caps": "d",
-        "class": ""
+        "shift-caps": "d"
       },
       "ru": {
         "case-down": "в",
         "case-up": "В",
         "caps": "В",
-        "shift-caps": "в",
-        "class": ""
+        "shift-caps": "в"
       }
     },
     {
@@ -521,15 +457,13 @@
         "case-down": "f",
         "case-up": "F",
         "caps": "F",
-        "shift-caps": "f",
-        "class": ""
+        "shift-caps": "f"
       },
       "ru": {
         "case-down": "а",
         "case-up": "А",
         "caps": "А",
-        "shift-caps": "а",
-        "class": ""
+        "shift-caps": "а"
       }
     },
     {
@@ -537,15 +471,13 @@
         "case-down": "g",
         "case-up": "G",
         "caps": "G",
-        "shift-caps": "g",
-        "class": ""
+        "shift-caps": "g"
       },
       "ru": {
         "case-down": "п",
         "case-up": "П",
         "caps": "П",
-        "shift-caps": "п",
-        "class": ""
+        "shift-caps": "п"
       }
     },
     {
@@ -553,15 +485,13 @@
         "case-down": "h",
         "case-up": "H",
         "caps": "H",
-        "shift-caps": "h",
-        "class": ""
+        "shift-caps": "h"
       },
       "ru": {
         "case-down": "р",
         "case-up": "Р",
         "caps": "Р",
-        "shift-caps": "р",
-        "class": ""
+        "shift-caps": "р"
       }
     },
     {
@@ -569,15 +499,13 @@
         "case-down": "j",
         "case-up": "J",
         "caps": "J",
-        "shift-caps": "j",
-        "class": ""
+        "shift-caps": "j"
       },
       "ru": {
         "case-down": "о",
         "case-up": "О",
         "caps": "О",
-        "shift-caps": "о",
-        "class": ""
+        "shift-caps": "о"
       }
     },
     {
@@ -585,15 +513,13 @@
         "case-down": "k",
         "case-up": "K",
         "caps": "K",
-        "shift-caps": "k",
-        "class": ""
+        "shift-caps": "k"
       },
       "ru": {
         "case-down": "л",
         "case-up": "Л",
         "caps": "Л",
-        "shift-caps": "л",
-        "class": ""
+        "shift-caps": "л"
       }
     },
     {
@@ -601,15 +527,13 @@
         "case-down": "l",
         "case-up": "L",
         "caps": "L",
-        "shift-caps": "l",
-        "class": ""
+        "shift-caps": "l"
       },
       "ru": {
         "case-down": "д",
         "case-up": "Д",
         "caps": "Д",
-        "shift-caps": "д",
-        "class": ""
+        "shift-caps": "д"
       }
     },
     {
@@ -617,15 +541,13 @@
         "case-down": ";",
         "case-up": ":",
         "caps": ":",
-        "shift-caps": ";",
-        "class": ""
+        "shift-caps": ";"
       },
       "ru": {
         "case-down": "ж",
         "case-up": "Ж",
         "caps": "Ж",
-        "shift-caps": "ж",
-        "class": ""
+        "shift-caps": "ж"
       }
     },
     {
@@ -633,15 +555,13 @@
         "case-down": "'",
         "case-up": "\"",
         "caps": "\"",
-        "shift-caps": "'",
-        "class": ""
+        "shift-caps": "'"
       },
       "ru": {
         "case-down": "э",
         "case-up": "Э",
         "caps": "Э",
-        "shift-caps": "э",
-        "class": ""
+        "shift-caps": "э"
       }
     },
     {
@@ -649,15 +569,13 @@
         "case-down": "Enter",
         "case-up": "Enter",
         "caps": "Enter",
-        "shift-caps": "Enter",
-        "class": "key-enter"
+        "shift-caps": "Enter"
       },
       "ru": {
         "case-down": "Enter",
         "case-up": "Enter",
         "caps": "Enter",
-        "shift-caps": "Enter",
-        "class": "key-enter"
+        "shift-caps": "Enter"
       }
     }
   ],
@@ -667,15 +585,13 @@
         "case-down": "Shift",
         "case-up": "Shift",
         "caps": "Shift",
-        "shift-caps": "Shift",
-        "class": "key-shift shift-left"
+        "shift-caps": "Shift"
       },
       "ru": {
         "case-down": "Shift",
         "case-up": "Shift",
         "caps": "Shift",
-        "shift-caps": "Shift",
-        "class": "key-shift shift-left"
+        "shift-caps": "Shift"
       }
     },
     {
@@ -683,15 +599,13 @@
         "case-down": "z",
         "case-up": "Z",
         "caps": "z",
-        "shift-caps": "Z",
-        "class": ""
+        "shift-caps": "Z"
       },
       "ru": {
         "case-down": "я",
         "case-up": "Я",
         "caps": "Я",
-        "shift-caps": "я",
-        "class": ""
+        "shift-caps": "я"
       }
     },
     {
@@ -699,15 +613,13 @@
         "case-down": "x",
         "case-up": "X",
         "caps": "x",
-        "shift-caps": "X",
-        "class": ""
+        "shift-caps": "X"
       },
       "ru": {
         "case-down": "ч",
         "case-up": "Ч",
         "caps": "Ч",
-        "shift-caps": "ч",
-        "class": ""
+        "shift-caps": "ч"
       }
     },
     {
@@ -715,15 +627,13 @@
         "case-down": "с",
         "case-up": "С",
         "caps": "C",
-        "shift-caps": "c",
-        "class": ""
+        "shift-caps": "c"
       },
       "ru": {
         "case-down": "с",
         "case-up": "С",
         "caps": "С",
-        "shift-caps": "с",
-        "class": ""
+        "shift-caps": "с"
       }
     },
     {
@@ -731,15 +641,13 @@
         "case-down": "v",
         "case-up": "V",
         "caps": "V",
-        "shift-caps": "v",
-        "class": ""
+        "shift-caps": "v"
       },
       "ru": {
         "case-down": "м",
         "case-up": "М",
         "caps": "М",
-        "shift-caps": "м",
-        "class": ""
+        "shift-caps": "м"
       }
     },
     {
@@ -747,15 +655,13 @@
         "case-down": "b",
         "case-up": "B",
         "caps": "B",
-        "shift-caps": "b",
-        "class": ""
+        "shift-caps": "b"
       },
       "ru": {
         "case-down": "и",
         "case-up": "И",
         "caps": "И",
-        "shift-caps": "и",
-        "class": ""
+        "shift-caps": "и"
       }
     },
     {
@@ -763,15 +669,13 @@
         "case-down": "n",
         "case-up": "N",
         "caps": "N",
-        "shift-caps": "n",
-        "class": ""
+        "shift-caps": "n"
       },
       "ru": {
         "case-down": "т",
         "case-up": "Т",
         "caps": "Т",
-        "shift-caps": "т",
-        "class": ""
+        "shift-caps": "т"
       }
     },
     {
@@ -779,15 +683,13 @@
         "case-down": "m",
         "case-up": "M",
         "caps": "M",
-        "shift-caps": "m",
-        "class": ""
+        "shift-caps": "m"
       },
       "ru": {
         "case-down": "ь",
         "case-up": "Ь",
         "caps": "Ь",
-        "shift-caps": "ь",
-        "class": ""
+        "shift-caps": "ь"
       }
     },
     {
@@ -795,15 +697,13 @@
         "case-down": ",",
         "case-up": "<",
         "caps": "<",
-        "shift-caps": ",",
-        "class": ""
+        "shift-caps": ","
       },
       "ru": {
         "case-down": "б",
         "case-up": "Б",
         "caps": "Б",
-        "shift-caps": "б",
-        "class": ""
+        "shift-caps": "б"
       }
     },
     {
@@ -811,15 +711,13 @@
         "case-down": ".",
         "case-up": ">",
         "caps": ">",
-        "shift-caps": ".",
-        "class": ""
+        "shift-caps": "."
       },
       "ru": {
         "case-down": "ю",
         "case-up": "Ю",
         "caps": "Ю",
-        "shift-caps": "ю",
-        "class": ""
+        "shift-caps": "ю"
       }
     },
     {
@@ -827,15 +725,13 @@
         "case-down": "/",
         "case-up": "?",
         "caps": "?",
-        "shift-caps": "/",
-        "class": ""
+        "shift-caps": "/"
       },
       "ru": {
         "case-down": ".",
         "case-up": ",",
         "caps": ",",
-        "shift-caps": ".",
-        "class": ""
+        "shift-caps": "."
       }
     },
     {
@@ -843,15 +739,13 @@
         "case-down": "▲",
         "case-up": "▲",
         "caps": "▲",
-        "shift-caps": "▲",
-        "class": ""
+        "shift-caps": "▲"
       },
       "ru": {
         "case-down": "▲",
         "case-up": "▲",
         "caps": "▲",
-        "shift-caps": "▲",
-        "class": ""
+        "shift-caps": "▲"
       }
     },
     {
@@ -859,15 +753,13 @@
         "case-down": "Shift",
         "case-up": "Shift",
         "caps": "Shift",
-        "shift-caps": "Shift",
-        "class": "key-shift shift-right"
+        "shift-caps": "Shift"
       },
       "ru": {
         "case-down": "Shift",
         "case-up": "Shift",
         "caps": "Shift",
-        "shift-caps": "Shift",
-        "class": "key-shift shift-right"
+        "shift-caps": "Shift"
       }
     }
   ],
@@ -877,15 +769,13 @@
         "case-down": "Ctrl",
         "case-up": "Ctrl",
         "caps": "Ctrl",
-        "shift-caps": "Ctrl",
-        "class": "key-ctrl ctrl-left"
+        "shift-caps": "Ctrl"
       },
       "ru": {
         "case-down": "Ctrl",
         "case-up": "Ctrl",
         "caps": "Ctrl",
-        "shift-caps": "Ctrl",
-        "class": "key-ctrl ctrl-left"
+        "shift-caps": "Ctrl"
       }
     },
     {
@@ -893,15 +783,13 @@
         "case-down": "Win",
         "case-up": "Win",
         "caps": "Win",
-        "shift-caps": "Win",
-        "class": "key-win"
+        "shift-caps": "Win"
       },
       "ru": {
         "case-down": "Win",
         "case-up": "Win",
         "caps": "Win",
-        "shift-caps": "Win",
-        "class": "key-win"
+        "shift-caps": "Win"
       }
     },
     {
@@ -909,15 +797,13 @@
         "case-down": "Alt",
         "case-up": "Alt",
         "caps": "Alt",
-        "shift-caps": "Alt",
-        "class": "key-alt alt-left"
+        "shift-caps": "Alt"
       },
       "ru": {
         "case-down": "Alt",
         "case-up": "Alt",
         "caps": "Alt",
-        "shift-caps": "Alt",
-        "class": "key-alt alt-left"
+        "shift-caps": "Alt"
       }
     },
     {
@@ -925,15 +811,13 @@
         "case-down": "",
         "case-up": "",
         "caps": "",
-        "shift-caps": "",
-        "class": "key-space"
+        "shift-caps": ""
       },
       "ru": {
         "case-down": "",
         "case-up": "",
         "caps": "",
-        "shift-caps": "",
-        "class": "key-space"
+        "shift-caps": ""
       }
     },
     {
@@ -941,15 +825,13 @@
         "case-down": "Alt",
         "case-up": "Alt",
         "caps": "Alt",
-        "shift-caps": "Alt",
-        "class": "key-alt alt-right"
+        "shift-caps": "Alt"
       },
       "ru": {
         "case-down": "Alt",
         "case-up": "Alt",
         "caps": "Alt",
-        "shift-caps": "Alt",
-        "class": "key-alt alt-right"
+        "shift-caps": "Alt"
       }
     },
     {
@@ -957,15 +839,13 @@
         "case-down": "▲",
         "case-up": "▲",
         "caps": "▲",
-        "shift-caps": "▲",
-        "class": ""
+        "shift-caps": "▲"
       },
       "ru": {
         "case-down": "▲",
         "case-up": "▲",
         "caps": "▲",
-        "shift-caps": "▲",
-        "class": ""
+        "shift-caps": "▲"
       }
     },
     {
@@ -973,15 +853,13 @@
         "case-down": "▼",
         "case-up": "▼",
         "caps": "▼",
-        "shift-caps": "▼",
-        "class": ""
+        "shift-caps": "▼"
       },
       "ru": {
         "case-down": "▼",
         "case-up": "▼",
         "caps": "▼",
-        "shift-caps": "▼",
-        "class": ""
+        "shift-caps": "▼"
       }
     },
     {
@@ -989,15 +867,13 @@
         "case-down": "►",
         "case-up": "►",
         "caps": "►",
-        "shift-caps": "►",
-        "class": ""
+        "shift-caps": "►"
       },
       "ru": {
         "case-down": "►",
         "case-up": "►",
         "caps": "►",
-        "shift-caps": "►",
-        "class": ""
+        "shift-caps": "►"
       }
     },
     {
@@ -1005,15 +881,13 @@
         "case-down": "Ctrl",
         "case-up": "Ctrl",
         "caps": "Ctrl",
-        "shift-caps": "Ctrl",
-        "class": "key-ctrl ctrl-right"
+        "shift-caps": "Ctrl"
       },
       "ru": {
         "case-down": "Ctrl",
         "case-up": "Ctrl",
         "caps": "Ctrl",
-        "shift-caps": "Ctrl",
-        "class": "key-ctrl ctrl-right"
+        "shift-caps": "Ctrl"
       }
     }
   ]

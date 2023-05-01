@@ -29,7 +29,6 @@ html {
   text-transform: lowercase;
 }
 
-
 .row {
   display: flex;
 }
@@ -102,4 +101,8 @@ html {
     background-color: #ffffff;
     color: #333333;
   }
+}
+
+.hidden {
+  display: none;
 }

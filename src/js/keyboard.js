@@ -5,6 +5,9 @@ export default function createKeyboard() {
   const div = document.createElement('div');
   const keyboard = document.createElement('div');
   const keyboardKeys = document.createElement('div');
+  const h1 = document.createElement('h1');
+
+  h1.innerText = 'RSS Виртуальная клавиатура';
 
   const textarea = document.createElement('textarea');
   textarea.classList.add('textarea');
@@ -13,6 +16,7 @@ export default function createKeyboard() {
   textarea.cols = '50';
 
   div.classList.add('container');
+  div.append(h1);
   div.append(textarea);
   keyboard.classList.add('keyboard-wrapp');
 
@@ -21,6 +25,7 @@ export default function createKeyboard() {
     .then((keys) => keys.map((item) => keyboardKeys.append(item)))
     .then(() => {
       const keyList = [...document.querySelectorAll('.key')];
+
       keyList.map((key) => {
         if (key.outerText === 'Backspace') {
           key.classList.add('backspace-key');
@@ -41,6 +46,5 @@ export default function createKeyboard() {
 
   keyboard.append(keyboardKeys);
   div.append(keyboard);
-
   root.append(div);
 }

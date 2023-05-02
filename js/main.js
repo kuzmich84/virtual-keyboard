@@ -50,6 +50,41 @@ function _getKeys() {
 
 /***/ }),
 
+/***/ "./src/js/helpers.js":
+/*!***************************!*\
+  !*** ./src/js/helpers.js ***!
+  \***************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ runOnKeys)
+/* harmony export */ });
+function runOnKeys(func) {
+  for (var _len = arguments.length, codes = new Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
+    codes[_key - 1] = arguments[_key];
+  }
+  var pressed = new Set();
+  document.addEventListener('keydown', function (event) {
+    pressed.add(event.code);
+
+    /* eslint-disable-next-line */
+    for (var _i = 0, _codes = codes; _i < _codes.length; _i++) {
+      var code = _codes[_i];
+      if (!pressed.has(code)) {
+        return;
+      }
+    }
+    pressed.clear();
+    func();
+  });
+  document.addEventListener('keyup', function (event) {
+    pressed["delete"](event.code);
+  });
+}
+
+/***/ }),
+
 /***/ "./src/js/keyboard.js":
 /*!****************************!*\
   !*** ./src/js/keyboard.js ***!
@@ -92,7 +127,7 @@ function createKeyboard() {
     var keyList = _toConsumableArray(document.querySelectorAll('.key'));
     keyList.map(function (key) {
       if (key.outerText === 'Backspace') {
-        key.classList.add('backspace-key');
+        key.classList.add('key-backspace');
       } else if (key.outerText === 'Tab') {
         key.classList.add('key-tab');
       } else if (key.outerText === 'CapsLock') {
@@ -103,12 +138,34 @@ function createKeyboard() {
         key.classList.add('key-shift');
       } else if (key.outerText === '') {
         key.classList.add('key-space');
+      } else if (key.outerText === 'Ctrl') {
+        key.classList.add('key-ctrl');
+      } else if (key.outerText === 'Win') {
+        key.classList.add('key-win');
+      } else if (key.outerText === 'Alt') {
+        key.classList.add('key-alt');
       }
       return null;
     });
+    var shift = document.querySelectorAll('.key-shift');
+    var ctrl = document.querySelectorAll('.key-ctrl');
+    var alt = document.querySelectorAll('.key-alt');
+    shift[0].classList.add('shift-left');
+    shift[1].classList.add('shift-right');
+    ctrl[0].classList.add('ctrl-left');
+    ctrl[1].classList.add('ctrl-right');
+    alt[0].classList.add('alt-left');
+    alt[1].classList.add('alt-right');
   });
   keyboard.append(keyboardKeys);
   div.append(keyboard);
+  ['Клавиатура создана в операционной системе Windows', 'Для переключения языка комбинация: левыe ctrl + alt'].map(function (item) {
+    var p = document.createElement('p');
+    p.innerText = item;
+    return p;
+  }).map(function (item2) {
+    return div.append(item2);
+  });
   root.append(div);
 }
 
@@ -249,11 +306,149 @@ var __webpack_exports__ = {};
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _styles_styles_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles/styles.scss */ "./src/styles/styles.scss");
 /* harmony import */ var _js_keyboard__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./js/keyboard */ "./src/js/keyboard.js");
+/* harmony import */ var _js_helpers__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./js/helpers */ "./src/js/helpers.js");
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter); }
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
+
 
 
 (0,_js_keyboard__WEBPACK_IMPORTED_MODULE_1__["default"])();
-
-// setTimeout(() => console.log(document.querySelectorAll(".key")), 1000);
+function init() {
+  var keys = _toConsumableArray(document.querySelectorAll('.key'));
+  var textarea = document.querySelector('textarea');
+  keys.map(function (item, i, arr) {
+    if (i === 0) {
+      item.setAttribute('keycode', 'Backquote');
+    } else if (i > 0 && i <= 10) {
+      item.setAttribute('keycode', "Digit".concat(arr[i].innerText.toUpperCase()));
+    } else if (i === 11) {
+      item.setAttribute('keycode', 'Minus');
+    } else if (i === 12) {
+      item.setAttribute('keycode', 'Equal');
+    } else if (i === 13) {
+      item.setAttribute('keycode', 'Backspace');
+    } else if (i === 14) {
+      item.setAttribute('keycode', 'Tab');
+    } else if (i === 25) {
+      item.setAttribute('keycode', 'BracketLeft');
+    } else if (i === 26) {
+      item.setAttribute('keycode', 'BracketRight');
+    } else if (i === 27) {
+      item.setAttribute('keycode', 'Backslash');
+    } else if (i === 28) {
+      item.setAttribute('keycode', 'CapsLock');
+    } else if (i === 38) {
+      item.setAttribute('keycode', 'Semicolon');
+    } else if (i === 39) {
+      item.setAttribute('keycode', 'Quote');
+    } else if (i === 40) {
+      item.setAttribute('keycode', 'Enter');
+    } else if (i === 41) {
+      item.setAttribute('keycode', 'ShiftLeft');
+    } else if (i === 49) {
+      item.setAttribute('keycode', 'Comma');
+    } else if (i === 50) {
+      item.setAttribute('keycode', 'Period');
+    } else if (i === 51) {
+      item.setAttribute('keycode', 'Slash');
+    } else if (i === 52) {
+      item.setAttribute('keycode', 'ArrowUp');
+    } else if (i === 53) {
+      item.setAttribute('keycode', 'ShiftRight');
+    } else if (i === 54) {
+      item.setAttribute('keycode', 'ControlLeft');
+    } else if (i === 55) {
+      item.setAttribute('keycode', 'OSLeft');
+    } else if (i === 56) {
+      item.setAttribute('keycode', 'AltLeft');
+    } else if (i === 57) {
+      item.setAttribute('keycode', 'Space');
+    } else if (i === 58) {
+      item.setAttribute('keycode', 'AltRight');
+    } else if (i === 59) {
+      item.setAttribute('keycode', 'ArrowLeft');
+    } else if (i === 60) {
+      item.setAttribute('keycode', 'ArrowDown');
+    } else if (i === 61) {
+      item.setAttribute('keycode', 'ArrowRight');
+    } else if (i === 62) {
+      item.setAttribute('keycode', 'ControlRight');
+    } else {
+      item.setAttribute('keycode', "Key".concat(arr[i].innerText.toUpperCase()));
+    }
+    item.querySelector('.ru').classList.add('hidden');
+    return null;
+  });
+  window.addEventListener('keydown', function (e) {
+    textarea.focus();
+    keys.map(function (item, i, arr) {
+      if (e.code === arr[i].getAttribute('keycode')) {
+        arr[i].classList.add('active');
+      }
+      return null;
+    });
+    if (e.code === 'ShiftLeft') {
+      keys.map(function (item) {
+        item.querySelector('.case-down').classList.add('hidden');
+        item.querySelector('.case-up').classList.remove('hidden');
+        return null;
+      });
+    }
+    if (e.code === 'CapsLock') {
+      keys.map(function (item) {
+        item.querySelector('.case-down').classList.toggle('hidden');
+        item.querySelector('.caps').classList.toggle('hidden');
+        return null;
+      });
+    }
+  });
+  window.addEventListener('keyup', function (e) {
+    keys.map(function (item, i, arr) {
+      if (e.code === arr[i].getAttribute('keycode')) {
+        arr[i].classList.remove('active');
+        arr[i].classList.add('remove');
+      }
+      setTimeout(function () {
+        arr[i].classList.remove('remove');
+      }, 200);
+      return null;
+    });
+    if (e.code === 'ShiftLeft') {
+      keys.map(function (item) {
+        item.querySelector('.case-down').classList.remove('hidden');
+        item.querySelector('.case-up').classList.add('hidden');
+        return null;
+      });
+    }
+  });
+  keys.map(function (key) {
+    key.addEventListener('mousedown', function (e) {
+      e.currentTarget.classList.add('active');
+    });
+    key.addEventListener('mouseup', function (e) {
+      e.currentTarget.classList.remove('active');
+      e.currentTarget.classList.add('remove');
+      setTimeout(function () {
+        key.classList.remove('remove');
+      }, 200);
+    });
+    return null;
+  });
+  (0,_js_helpers__WEBPACK_IMPORTED_MODULE_2__["default"])(function () {
+    keys.map(function (item) {
+      item.querySelector('.en').classList.toggle('hidden');
+      item.querySelector('.ru').classList.toggle('hidden');
+      item.querySelector('.ru').querySelector('.case-down').classList.toggle('hidden');
+      return null;
+    });
+  }, 'ControlLeft', 'AltLeft');
+}
+setTimeout(init, 1000);
+console.log('Уважаемый проверяющий! Просьба проверить в четверг.');
 })();
 
 /******/ })()

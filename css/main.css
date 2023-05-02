@@ -420,9 +420,10 @@ html {
   align-items: center;
   margin: 4px;
   transition: 0.2s;
+  cursor: pointer;
 }
 
-.backspace-key,
+.key-backspace,
 .key-tab,
 .key-caps-lock,
 .key-enter,
@@ -445,7 +446,7 @@ html {
 }
 
 .key.remove {
-  animation: key-animation-unpress 0.5s forwards;
+  animation: key-animation-unpress 2s forwards;
 }
 
 @keyframes key-animation-press {

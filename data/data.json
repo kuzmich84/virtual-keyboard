@@ -539,8 +539,8 @@
     {
       "en": {
         "case-down": ";",
-        "case-up": ":",
-        "caps": ":",
+        "case-up": ";",
+        "caps": ";",
         "shift-caps": ";"
       },
       "ru": {
@@ -553,8 +553,8 @@
     {
       "en": {
         "case-down": "'",
-        "case-up": "\"",
-        "caps": "\"",
+        "case-up": "'",
+        "caps": "'",
         "shift-caps": "'"
       },
       "ru": {
@@ -624,7 +624,7 @@
     },
     {
       "en": {
-        "case-down": "с",
+        "case-down": "c",
         "case-up": "С",
         "caps": "C",
         "shift-caps": "c"
@@ -836,16 +836,16 @@
     },
     {
       "en": {
-        "case-down": "▲",
-        "case-up": "▲",
-        "caps": "▲",
-        "shift-caps": "▲"
+        "case-down": "◄",
+        "case-up": "◄",
+        "caps": "◄",
+        "shift-caps": "◄"
       },
       "ru": {
-        "case-down": "▲",
-        "case-up": "▲",
-        "caps": "▲",
-        "shift-caps": "▲"
+        "case-down": "◄",
+        "case-up": "◄",
+        "caps": "◄",
+        "shift-caps": "◄"
       }
     },
     {

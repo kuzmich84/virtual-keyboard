@@ -28,7 +28,7 @@ export default function createKeyboard() {
 
       keyList.map((key) => {
         if (key.outerText === 'Backspace') {
-          key.classList.add('backspace-key');
+          key.classList.add('key-backspace');
         } else if (key.outerText === 'Tab') {
           key.classList.add('key-tab');
         } else if (key.outerText === 'CapsLock') {
@@ -39,12 +39,40 @@ export default function createKeyboard() {
           key.classList.add('key-shift');
         } else if (key.outerText === '') {
           key.classList.add('key-space');
+        } else if (key.outerText === 'Ctrl') {
+          key.classList.add('key-ctrl');
+        } else if (key.outerText === 'Win') {
+          key.classList.add('key-win');
+        } else if (key.outerText === 'Alt') {
+          key.classList.add('key-alt');
         }
         return null;
       });
+
+      const shift = document.querySelectorAll('.key-shift');
+      const ctrl = document.querySelectorAll('.key-ctrl');
+      const alt = document.querySelectorAll('.key-alt');
+      shift[0].classList.add('shift-left');
+      shift[1].classList.add('shift-right');
+      ctrl[0].classList.add('ctrl-left');
+      ctrl[1].classList.add('ctrl-right');
+      alt[0].classList.add('alt-left');
+      alt[1].classList.add('alt-right');
     });
 
   keyboard.append(keyboardKeys);
   div.append(keyboard);
+
+  [
+    'Клавиатура создана в операционной системе Windows',
+    'Для переключения языка комбинация: левыe ctrl + alt',
+  ]
+    .map((item) => {
+      const p = document.createElement('p');
+      p.innerText = item;
+      return p;
+    })
+    .map((item2) => div.append(item2));
+
   root.append(div);
 }

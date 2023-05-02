@@ -77,7 +77,6 @@ function init() {
 
   window.addEventListener('keydown', (e) => {
     e.preventDefault();
-
     keys.map((item, i, arr) => {
       if (e.code === arr[i].getAttribute('keycode')) {
         arr[i].classList.add('active');
@@ -86,16 +85,50 @@ function init() {
             .querySelector(`.${localStorage.lang}`)
             .querySelectorAll('span'),
         ];
-        spanList.map((item) => {
-          if (!item.classList.contains('hidden')) {
-            textarea.value += item.innerText;
+        spanList.map((spanitem) => {
+          if (!spanitem.classList.contains('hidden')) {
+            if (e.code === 'Tab' || e.code === 'Space') {
+              textarea.value += '  ';
+              return '';
+            }
+
+            if (
+              e.code === 'CapsLock'
+              || e.code === 'ShiftLeft'
+              || e.code === 'ShiftRight'
+              || e.code === 'ControlRight'
+              || e.code === 'ControlLeft'
+              || e.code === 'AltRight'
+              || e.code === 'AltLeft'
+            ) {
+              return '';
+            }
+            if (e.code === 'Enter') {
+              textarea.value += '\r\n';
+              return '';
+            }
+
+            if (e.code === 'Backspace') {
+              textarea.value = textarea.value.slice(0, -1);
+              return '';
+            }
+            if (
+              e.code === 'ArrowLeft'
+              || e.code === 'ArrowUp'
+              || e.code === 'ArrowDown'
+              || e.code === 'ArrowRight'
+            ) {
+              return '';
+            }
+            textarea.value += spanitem.innerText;
           }
+          return true;
         });
       }
-      return null;
+      return true;
     });
 
-    if (e.code === 'ShiftLeft') {
+    if (e.code === 'ShiftLeft' || e.code === 'ShiftRight') {
       keys.map((item) => {
         if (isCaps) {
           item
@@ -106,7 +139,7 @@ function init() {
             .querySelector(`.${localStorage.lang}`)
             .querySelector('.shift-caps')
             .classList.remove('hidden');
-          return;
+          return '';
         }
         item
           .querySelector(`.${localStorage.lang}`)
@@ -116,13 +149,18 @@ function init() {
           .querySelector(`.${localStorage.lang}`)
           .querySelector('.case-up')
           .classList.remove('hidden');
-        return null;
+
+        return true;
       });
     }
 
     if (e.code === 'CapsLock') {
-      isCaps === true ? (isCaps = false) : (isCaps = true);
-      console.log(isCaps);
+      if (isCaps) {
+        isCaps = false;
+      } else {
+        isCaps = true;
+      }
+
       keys.map((item) => {
         item
           .querySelector(`.${localStorage.lang}`)
@@ -133,7 +171,7 @@ function init() {
           .querySelector('.caps')
           .classList.toggle('hidden');
 
-        return null;
+        return true;
       });
     }
   });
@@ -150,7 +188,7 @@ function init() {
       return null;
     });
 
-    if (e.code === 'ShiftLeft') {
+    if (e.code === 'ShiftLeft' || e.code === 'ShiftRight') {
       keys.map((item) => {
         if (isCaps) {
           item
@@ -161,7 +199,7 @@ function init() {
             .querySelector(`.${localStorage.lang}`)
             .querySelector('.shift-caps')
             .classList.add('hidden');
-          return;
+          return '';
         }
 
         item
@@ -186,10 +224,83 @@ function init() {
           .querySelectorAll('span'),
       ];
 
+      if (e.currentTarget.getAttribute('keycode') === 'CapsLock') {
+        keys.map((itemCaps) => {
+          itemCaps
+            .querySelector(`.${localStorage.lang}`)
+            .querySelector('.case-down')
+            .classList.toggle('hidden');
+          itemCaps
+            .querySelector(`.${localStorage.lang}`)
+            .querySelector('.caps')
+            .classList.toggle('hidden');
+
+          return true;
+        });
+      }
+
+      if (e.currentTarget.getAttribute('keycode') === 'ShiftLeft') {
+        keys.map((itemShift) => {
+          if (isCaps) {
+            itemShift
+              .querySelector(`.${localStorage.lang}`)
+              .querySelector('.caps')
+              .classList.remove('hidden');
+            itemShift
+              .querySelector(`.${localStorage.lang}`)
+              .querySelector('.shift-caps')
+              .classList.add('hidden');
+            return '';
+          }
+
+          itemShift
+            .querySelector(`.${localStorage.lang}`)
+            .querySelector('.case-down')
+            .classList.remove('hidden');
+          itemShift
+            .querySelector(`.${localStorage.lang}`)
+            .querySelector('.case-up')
+            .classList.add('hidden');
+          return null;
+        });
+      }
+
       spanList.map((item) => {
         if (!item.classList.contains('hidden')) {
+          if (item.innerText === 'Tab' || e.code === 'Space') {
+            textarea.value += '  ';
+            return '';
+          }
+
+          if (
+            item.innerText === 'CapsLock'
+            || item.innerText === 'Shift'
+            || item.innerText === 'Ctrl'
+            || item.innerText === 'Alt'
+          ) {
+            return '';
+          }
+          if (item.innerText === 'Enter') {
+            textarea.value += '\r\n';
+            return '';
+          }
+
+          if (item.innerText === 'Backspace') {
+            textarea.value = textarea.value.slice(0, -1);
+            return '';
+          }
+          if (
+            item.innerText === '◄'
+            || item.innerText === '▲'
+            || item.innerText === '▼'
+            || item.innerText === '►'
+          ) {
+            return '';
+          }
           textarea.value += item.innerText;
         }
+
+        return true;
       });
     });
 
@@ -206,14 +317,21 @@ function init() {
 
   runOnKeys(
     () => {
-      localStorage.lang === 'en'
-        ? localStorage.setItem('lang', 'ru')
-        : localStorage.setItem('lang', 'en');
+      if (localStorage.lang === 'en') {
+        localStorage.setItem('lang', 'ru');
+      } else {
+        localStorage.setItem('lang', 'en');
+      }
+
       keys.map((item) => {
         item.querySelector('.en').classList.toggle('hidden');
         item.querySelector('.ru').classList.toggle('hidden');
         item
           .querySelector('.ru')
+          .querySelector('.case-down')
+          .classList.toggle('hidden');
+        item
+          .querySelector('.en')
           .querySelector('.case-down')
           .classList.toggle('hidden');
         return null;
@@ -228,4 +346,3 @@ setTimeout(() => {
   localStorage.setItem('lang', 'en');
   init();
 }, 1000);
-console.log('Уважаемый проверяющий! Просьба проверить в четверг.');

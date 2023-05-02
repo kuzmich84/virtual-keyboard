@@ -73,27 +73,66 @@ function init() {
     return null;
   });
 
+  let isCaps = false;
+
   window.addEventListener('keydown', (e) => {
-    textarea.focus();
+    e.preventDefault();
+
     keys.map((item, i, arr) => {
       if (e.code === arr[i].getAttribute('keycode')) {
         arr[i].classList.add('active');
+        const spanList = [
+          ...item
+            .querySelector(`.${localStorage.lang}`)
+            .querySelectorAll('span'),
+        ];
+        spanList.map((item) => {
+          if (!item.classList.contains('hidden')) {
+            textarea.value += item.innerText;
+          }
+        });
       }
       return null;
     });
 
     if (e.code === 'ShiftLeft') {
       keys.map((item) => {
-        item.querySelector('.case-down').classList.add('hidden');
-        item.querySelector('.case-up').classList.remove('hidden');
+        if (isCaps) {
+          item
+            .querySelector(`.${localStorage.lang}`)
+            .querySelector('.caps')
+            .classList.add('hidden');
+          item
+            .querySelector(`.${localStorage.lang}`)
+            .querySelector('.shift-caps')
+            .classList.remove('hidden');
+          return;
+        }
+        item
+          .querySelector(`.${localStorage.lang}`)
+          .querySelector('.case-down')
+          .classList.add('hidden');
+        item
+          .querySelector(`.${localStorage.lang}`)
+          .querySelector('.case-up')
+          .classList.remove('hidden');
         return null;
       });
     }
 
     if (e.code === 'CapsLock') {
+      isCaps === true ? (isCaps = false) : (isCaps = true);
+      console.log(isCaps);
       keys.map((item) => {
-        item.querySelector('.case-down').classList.toggle('hidden');
-        item.querySelector('.caps').classList.toggle('hidden');
+        item
+          .querySelector(`.${localStorage.lang}`)
+          .querySelector('.case-down')
+          .classList.toggle('hidden');
+        item
+          .querySelector(`.${localStorage.lang}`)
+          .querySelector('.caps')
+          .classList.toggle('hidden');
+
         return null;
       });
     }
@@ -113,8 +152,26 @@ function init() {
 
     if (e.code === 'ShiftLeft') {
       keys.map((item) => {
-        item.querySelector('.case-down').classList.remove('hidden');
-        item.querySelector('.case-up').classList.add('hidden');
+        if (isCaps) {
+          item
+            .querySelector(`.${localStorage.lang}`)
+            .querySelector('.caps')
+            .classList.remove('hidden');
+          item
+            .querySelector(`.${localStorage.lang}`)
+            .querySelector('.shift-caps')
+            .classList.add('hidden');
+          return;
+        }
+
+        item
+          .querySelector(`.${localStorage.lang}`)
+          .querySelector('.case-down')
+          .classList.remove('hidden');
+        item
+          .querySelector(`.${localStorage.lang}`)
+          .querySelector('.case-up')
+          .classList.add('hidden');
         return null;
       });
     }
@@ -123,6 +180,17 @@ function init() {
   keys.map((key) => {
     key.addEventListener('mousedown', (e) => {
       e.currentTarget.classList.add('active');
+      const spanList = [
+        ...e.currentTarget
+          .querySelector(`.${localStorage.lang}`)
+          .querySelectorAll('span'),
+      ];
+
+      spanList.map((item) => {
+        if (!item.classList.contains('hidden')) {
+          textarea.value += item.innerText;
+        }
+      });
     });
 
     key.addEventListener('mouseup', (e) => {
@@ -138,6 +206,9 @@ function init() {
 
   runOnKeys(
     () => {
+      localStorage.lang === 'en'
+        ? localStorage.setItem('lang', 'ru')
+        : localStorage.setItem('lang', 'en');
       keys.map((item) => {
         item.querySelector('.en').classList.toggle('hidden');
         item.querySelector('.ru').classList.toggle('hidden');
@@ -153,5 +224,8 @@ function init() {
   );
 }
 
-setTimeout(init, 1000);
+setTimeout(() => {
+  localStorage.setItem('lang', 'en');
+  init();
+}, 1000);
 console.log('Уважаемый проверяющий! Просьба проверить в четверг.');

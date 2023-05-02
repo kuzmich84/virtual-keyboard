@@ -383,26 +383,62 @@ function init() {
     item.querySelector('.ru').classList.add('hidden');
     return null;
   });
+  var isCaps = false;
   window.addEventListener('keydown', function (e) {
-    textarea.focus();
+    e.preventDefault();
     keys.map(function (item, i, arr) {
       if (e.code === arr[i].getAttribute('keycode')) {
         arr[i].classList.add('active');
+        var spanList = _toConsumableArray(item.querySelector(".".concat(localStorage.lang)).querySelectorAll('span'));
+        spanList.map(function (spanitem) {
+          if (!spanitem.classList.contains('hidden')) {
+            if (e.code === 'Tab' || e.code === 'Space') {
+              textarea.value += '  ';
+              return '';
+            }
+            if (e.code === 'CapsLock' || e.code === 'ShiftLeft' || e.code === 'ShiftRight' || e.code === 'ControlRight' || e.code === 'ControlLeft' || e.code === 'AltRight' || e.code === 'AltLeft') {
+              return '';
+            }
+            if (e.code === 'Enter') {
+              textarea.value += '\r\n';
+              return '';
+            }
+            if (e.code === 'Backspace') {
+              textarea.value = textarea.value.slice(0, -1);
+              return '';
+            }
+            if (e.code === 'ArrowLeft' || e.code === 'ArrowUp' || e.code === 'ArrowDown' || e.code === 'ArrowRight') {
+              return '';
+            }
+            textarea.value += spanitem.innerText;
+          }
+          return true;
+        });
       }
-      return null;
+      return true;
     });
-    if (e.code === 'ShiftLeft') {
+    if (e.code === 'ShiftLeft' || e.code === 'ShiftRight') {
       keys.map(function (item) {
-        item.querySelector('.case-down').classList.add('hidden');
-        item.querySelector('.case-up').classList.remove('hidden');
-        return null;
+        if (isCaps) {
+          item.querySelector(".".concat(localStorage.lang)).querySelector('.caps').classList.add('hidden');
+          item.querySelector(".".concat(localStorage.lang)).querySelector('.shift-caps').classList.remove('hidden');
+          return '';
+        }
+        item.querySelector(".".concat(localStorage.lang)).querySelector('.case-down').classList.add('hidden');
+        item.querySelector(".".concat(localStorage.lang)).querySelector('.case-up').classList.remove('hidden');
+        return true;
       });
     }
     if (e.code === 'CapsLock') {
+      if (isCaps) {
+        isCaps = false;
+      } else {
+        isCaps = true;
+      }
       keys.map(function (item) {
-        item.querySelector('.case-down').classList.toggle('hidden');
-        item.querySelector('.caps').classList.toggle('hidden');
-        return null;
+        item.querySelector(".".concat(localStorage.lang)).querySelector('.case-down').classList.toggle('hidden');
+        item.querySelector(".".concat(localStorage.lang)).querySelector('.caps').classList.toggle('hidden');
+        return true;
       });
     }
   });
@@ -417,10 +453,15 @@ function init() {
       }, 200);
       return null;
     });
-    if (e.code === 'ShiftLeft') {
+    if (e.code === 'ShiftLeft' || e.code === 'ShiftRight') {
       keys.map(function (item) {
-        item.querySelector('.case-down').classList.remove('hidden');
-        item.querySelector('.case-up').classList.add('hidden');
+        if (isCaps) {
+          item.querySelector(".".concat(localStorage.lang)).querySelector('.caps').classList.remove('hidden');
+          item.querySelector(".".concat(localStorage.lang)).querySelector('.shift-caps').classList.add('hidden');
+          return '';
+        }
+        item.querySelector(".".concat(localStorage.lang)).querySelector('.case-down').classList.remove('hidden');
+        item.querySelector(".".concat(localStorage.lang)).querySelector('.case-up').classList.add('hidden');
         return null;
       });
     }
@@ -428,6 +469,50 @@ function init() {
   keys.map(function (key) {
     key.addEventListener('mousedown', function (e) {
       e.currentTarget.classList.add('active');
+      var spanList = _toConsumableArray(e.currentTarget.querySelector(".".concat(localStorage.lang)).querySelectorAll('span'));
+      if (e.currentTarget.getAttribute('keycode') === 'CapsLock') {
+        keys.map(function (itemCaps) {
+          itemCaps.querySelector(".".concat(localStorage.lang)).querySelector('.case-down').classList.toggle('hidden');
+          itemCaps.querySelector(".".concat(localStorage.lang)).querySelector('.caps').classList.toggle('hidden');
+          return true;
+        });
+      }
+      if (e.currentTarget.getAttribute('keycode') === 'ShiftLeft') {
+        keys.map(function (itemShift) {
+          if (isCaps) {
+            itemShift.querySelector(".".concat(localStorage.lang)).querySelector('.caps').classList.remove('hidden');
+            itemShift.querySelector(".".concat(localStorage.lang)).querySelector('.shift-caps').classList.add('hidden');
+            return '';
+          }
+          itemShift.querySelector(".".concat(localStorage.lang)).querySelector('.case-down').classList.remove('hidden');
+          itemShift.querySelector(".".concat(localStorage.lang)).querySelector('.case-up').classList.add('hidden');
+          return null;
+        });
+      }
+      spanList.map(function (item) {
+        if (!item.classList.contains('hidden')) {
+          if (item.innerText === 'Tab' || e.code === 'Space') {
+            textarea.value += '  ';
+            return '';
+          }
+          if (item.innerText === 'CapsLock' || item.innerText === 'Shift' || item.innerText === 'Ctrl' || item.innerText === 'Alt') {
+            return '';
+          }
+          if (item.innerText === 'Enter') {
+            textarea.value += '\r\n';
+            return '';
+          }
+          if (item.innerText === 'Backspace') {
+            textarea.value = textarea.value.slice(0, -1);
+            return '';
+          }
+          if (item.innerText === '◄' || item.innerText === '▲' || item.innerText === '▼' || item.innerText === '►') {
+            return '';
+          }
+          textarea.value += item.innerText;
+        }
+        return true;
+      });
     });
     key.addEventListener('mouseup', function (e) {
       e.currentTarget.classList.remove('active');
@@ -439,16 +524,24 @@ function init() {
     return null;
   });
   (0,_js_helpers__WEBPACK_IMPORTED_MODULE_2__["default"])(function () {
+    if (localStorage.lang === 'en') {
+      localStorage.setItem('lang', 'ru');
+    } else {
+      localStorage.setItem('lang', 'en');
+    }
     keys.map(function (item) {
       item.querySelector('.en').classList.toggle('hidden');
       item.querySelector('.ru').classList.toggle('hidden');
       item.querySelector('.ru').querySelector('.case-down').classList.toggle('hidden');
+      item.querySelector('.en').querySelector('.case-down').classList.toggle('hidden');
       return null;
     });
   }, 'ControlLeft', 'AltLeft');
 }
-setTimeout(init, 1000);
-console.log('Уважаемый проверяющий! Просьба проверить в четверг.');
+setTimeout(function () {
+  localStorage.setItem('lang', 'en');
+  init();
+}, 1000);
 })();
 
 /******/ })()

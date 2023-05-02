@@ -222,8 +222,8 @@
       "ru": {
         "case-down": "й",
         "case-up": "Й",
-        "caps": "й",
-        "shift-caps": "Й"
+        "caps": "Й",
+        "shift-caps": "й"
       }
     },
     {
@@ -236,8 +236,8 @@
       "ru": {
         "case-down": "ц",
         "case-up": "Ц",
-        "caps": "ц",
-        "shift-caps": "Ц"
+        "caps": "Ц",
+        "shift-caps": "ц"
       }
     },
     {
@@ -598,8 +598,8 @@
       "en": {
         "case-down": "z",
         "case-up": "Z",
-        "caps": "z",
-        "shift-caps": "Z"
+        "caps": "Z",
+        "shift-caps": "z"
       },
       "ru": {
         "case-down": "я",
@@ -612,8 +612,8 @@
       "en": {
         "case-down": "x",
         "case-up": "X",
-        "caps": "x",
-        "shift-caps": "X"
+        "caps": "X",
+        "shift-caps": "x"
       },
       "ru": {
         "case-down": "ч",

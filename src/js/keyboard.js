@@ -6,6 +6,7 @@ export default function createKeyboard() {
   const keyboard = document.createElement('div');
   const keyboardKeys = document.createElement('div');
   const h1 = document.createElement('h1');
+  const a = document.createElement('a');
 
   h1.innerText = 'RSS Виртуальная клавиатура';
 
@@ -73,6 +74,11 @@ export default function createKeyboard() {
       return p;
     })
     .map((item2) => div.append(item2));
+
+  a.href = 'https://github.com/kuzmich84/virtual-keyboard/pull/1';
+  a.textContent = 'Ссылка на PullRequest: https://github.com/kuzmich84/virtual-keyboard/pull/1';
+
+  div.append(a);
 
   root.append(div);
 }

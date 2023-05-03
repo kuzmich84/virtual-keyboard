@@ -109,6 +109,7 @@ function createKeyboard() {
   var keyboard = document.createElement('div');
   var keyboardKeys = document.createElement('div');
   var h1 = document.createElement('h1');
+  var a = document.createElement('a');
   h1.innerText = 'RSS Виртуальная клавиатура';
   var textarea = document.createElement('textarea');
   textarea.classList.add('textarea');
@@ -166,6 +167,9 @@ function createKeyboard() {
   }).map(function (item2) {
     return div.append(item2);
   });
+  a.href = 'https://github.com/kuzmich84/virtual-keyboard/pull/1';
+  a.textContent = 'Ссылка на PullRequest: https://github.com/kuzmich84/virtual-keyboard/pull/1';
+  div.append(a);
   root.append(div);
 }
 

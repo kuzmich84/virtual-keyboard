@@ -1,0 +1,25 @@
+{
+  "root": true,
+
+  "parserOptions": {
+    "ecmaVersion": 2022,
+    "sourceType": "module"
+  },
+
+  "env": {
+    "es6": true,
+    "browser": true,
+    "commonjs": true
+  },
+
+  "extends": "airbnb-base",
+
+  "rules": {
+    "no-restricted-syntax": [
+      "error",
+      "ForInStatement",
+      "LabeledStatement",
+      "WithStatement"
+    ]
+  }
+}

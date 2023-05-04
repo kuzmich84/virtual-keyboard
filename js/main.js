@@ -67,8 +67,6 @@ function runOnKeys(func) {
   var pressed = new Set();
   document.addEventListener('keydown', function (event) {
     pressed.add(event.code);
-
-    /* eslint-disable-next-line */
     for (var _i = 0, _codes = codes; _i < _codes.length; _i++) {
       var code = _codes[_i];
       if (!pressed.has(code)) {
@@ -104,7 +102,7 @@ function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToAr
 function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
 
 function createKeyboard() {
-  var root = document.getElementById('root');
+  var body = document.querySelector('body');
   var div = document.createElement('div');
   var keyboard = document.createElement('div');
   var keyboardKeys = document.createElement('div');
@@ -170,7 +168,7 @@ function createKeyboard() {
   a.href = 'https://github.com/kuzmich84/virtual-keyboard/pull/1';
   a.textContent = 'Ссылка на PullRequest: https://github.com/kuzmich84/virtual-keyboard/pull/1';
   div.append(a);
-  root.append(div);
+  body.append(div);
 }
 
 /***/ }),
@@ -196,26 +194,26 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 function createKyes() {
   return (0,_get_keys__WEBPACK_IMPORTED_MODULE_0__["default"])().then(function (data) {
     var rowList = Object.entries(data).map(function (item) {
-      var row = document.createElement('div');
+      var row = document.createElement("div");
       item[1].map(function (key) {
-        var keyDiv = document.createElement('div');
-        keyDiv.classList.add('key');
+        var keyDiv = document.createElement("div");
+        keyDiv.classList.add("key");
         Object.entries(key).map(function (_ref) {
           var _ref2 = _slicedToArray(_ref, 2),
             subKey = _ref2[0],
             value = _ref2[1];
-          var span1 = document.createElement('span');
+          var span1 = document.createElement("span");
           span1.classList.add(subKey);
           Object.entries(value).map(function (_ref3) {
             var _ref4 = _slicedToArray(_ref3, 2),
               keyName = _ref4[0],
               valueName = _ref4[1];
-            var span2 = document.createElement('span');
-            if (subKey === 'en' && keyName === 'case-down') {
+            var span2 = document.createElement("span");
+            if (subKey === "en" && keyName === "case-down") {
               span2.classList.add(keyName);
             } else {
               span2.classList.add(keyName);
-              span2.classList.add('hidden');
+              span2.classList.add("hidden");
             }
             span2.innerText = valueName;
             return span1.append(span2);
@@ -224,7 +222,7 @@ function createKyes() {
         });
         return row.append(keyDiv);
       });
-      row.classList.add('row');
+      row.classList.add("row");
       return row;
     });
     return rowList;

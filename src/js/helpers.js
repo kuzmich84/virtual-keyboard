@@ -4,7 +4,6 @@ export default function runOnKeys(func, ...codes) {
   document.addEventListener('keydown', (event) => {
     pressed.add(event.code);
 
-    /* eslint-disable-next-line */
     for (const code of codes) {
       if (!pressed.has(code)) {
         return;

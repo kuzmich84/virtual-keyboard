@@ -1,7 +1,7 @@
 import createKyes from './kyes';
 
 export default function createKeyboard() {
-  const root = document.getElementById('root');
+  const body = document.querySelector('body');
   const div = document.createElement('div');
   const keyboard = document.createElement('div');
   const keyboardKeys = document.createElement('div');
@@ -80,5 +80,5 @@ export default function createKeyboard() {
 
   div.append(a);
 
-  root.append(div);
+  body.append(div);
 }
